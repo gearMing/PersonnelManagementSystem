@@ -1,0 +1,58 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	134)
+
+(object Class_Category "培训计划编制"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5B3DD07203DD"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "培训管理员"
+	    quid       	"5B3DD2790264"
+	    stereotype 	"Actor")
+	(object UseCase "查看培训计划信息"
+	    quid       	"5B3DD2CC0110"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3DD415032B"
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::培训计划编制::设置计划预算审批和分摊"
+		    quidu      	"5B3DD32F02BE")))
+	(object UseCase "搜索培训计划"
+	    quid       	"5B3DD2F90238"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3DD3CD01F7"
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::培训计划编制::发布培训计划"
+		    quidu      	"5B3DD36501B9")
+		(object Dependency_Relationship
+		    quid       	"5B3DD3EB018A"
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::培训计划编制::查看培训计划信息"
+		    quidu      	"5B3DD2CC0110")))
+	(object UseCase "设置计划预算审批和分摊"
+	    quid       	"5B3DD32F02BE"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3DD41800AE"
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::培训计划编制::保存修改"
+		    quidu      	"5B3DD35700A8")))
+	(object UseCase "保存修改"
+	    quid       	"5B3DD35700A8")
+	(object UseCase "发布培训计划"
+	    quid       	"5B3DD36501B9"))
+    logical_presentations 	(list unit_reference_list
+	(object UseCaseDiagram "培训计划编制"
+	    quid       	"5B3DD0780172"
+	    title      	"培训计划编制"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list))))

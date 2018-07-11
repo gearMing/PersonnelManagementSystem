@@ -1,0 +1,1662 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	134)
+
+(object Class_Category "培训管理系统"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5B3A1BFA034D"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object UseCase "申请计划"
+	    quid       	"5B3B3C4702F7"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3C8603C5"
+		    documentation 	
+|扩展点：申请计划
+|扩展条件：所在单位同意，且学校研究同意送培并列入年度学位教育培训计划
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::报名"
+		    quidu      	"5B3B3C7B015F")))
+	(object UseCase "报名"
+	    quid       	"5B3B3C7B015F"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3D25037D"
+		    documentation 	
+|扩展点：申请计划
+|扩展条件：所在单位人事部门为用户出具介绍信并通过招生单位审核
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::考试"
+		    quidu      	"5B3B3CDB00BF")))
+	(object UseCase "考试"
+	    quid       	"5B3B3CDB00BF"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3DB200E5"
+		    documentation 	
+|扩展点：考试
+|扩展条件：送培人员通过考试
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::录取"
+		    quidu      	"5B3B3D8F0368")))
+	(object UseCase "录取"
+	    quid       	"5B3B3D8F0368"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3DF80035"
+		    documentation 	
+|扩展点：录取
+|扩展条件：送培人员被录取，且完成入学手续办理
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::信息录入"
+		    quidu      	"5B3B3DDE0271")))
+	(object UseCase "信息录入"
+	    quid       	"5B3B3DDE0271"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3E3F036D"
+		    documentation 	
+|扩展点：信息录入
+|扩展条件：完成信息录入，且在开学时间
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::入学"
+		    quidu      	"5B3B3E330338")))
+	(object UseCase "入学"
+	    quid       	"5B3B3E330338"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3EE80056"
+		    documentation 	
+|扩展点：入学
+|扩展条件：成功入学
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::在读"
+		    quidu      	"5B3B3E700399")))
+	(object UseCase "在读"
+	    quid       	"5B3B3E700399"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3F1203D5"
+		    documentation 	
+|扩展点：在读
+|扩展条件：学业结束
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::毕业"
+		    quidu      	"5B3B3F0800F8")))
+	(object UseCase "毕业"
+	    quid       	"5B3B3F0800F8"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3F8100A6"
+		    documentation 	
+|扩展点：毕业
+|扩展条件：毕业成功
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::学费核销和奖励"
+		    quidu      	"5B3B3F6900C1")))
+	(object UseCase "学费核销和奖励"
+	    quid       	"5B3B3F6900C1"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"5B3B3FD2031E"
+		    documentation 	
+|扩展点：学费核销和奖励
+|扩展条件：学费核销和奖励完成
+		    
+		    stereotype 	"extend"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::信息录入"
+		    quidu      	"5B3B3DDE0271")))
+	(object Association "$UNNAMED$0"
+	    quid       	"5B3B3C510111"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"5B3B3C51030D"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::申请计划"
+		    quidu      	"5B3B3C4702F7"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$2"
+		    quid       	"5B3B3C51030F"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$3"
+	    quid       	"5B3B3CD10080"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$4"
+		    quid       	"5B3B3CD103DD"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::申请计划"
+		    quidu      	"5B3B3C4702F7"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$5"
+		    quid       	"5B3B3CD103DF"
+		    supplier   	"Use Case View::Use-Case Model::Actors::学校"
+		    quidu      	"5B3B28910292")))
+	(object Association "$UNNAMED$6"
+	    quid       	"5B3B3D6F0267"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"5B3B3D7001F6"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::考试"
+		    quidu      	"5B3B3CDB00BF"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$8"
+		    quid       	"5B3B3D7001F8"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$9"
+	    quid       	"5B3B3D9E00D2"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$10"
+		    quid       	"5B3B3D9E0375"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::录取"
+		    quidu      	"5B3B3D8F0368"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$11"
+		    quid       	"5B3B3D9E0377"
+		    supplier   	"Use Case View::Use-Case Model::Actors::学校"
+		    quidu      	"5B3B28910292")))
+	(object Association "$UNNAMED$12"
+	    quid       	"5B3B3DAD0090"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"5B3B3DAD0336"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::录取"
+		    quidu      	"5B3B3D8F0368"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$14"
+		    quid       	"5B3B3DAD0338"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$15"
+	    quid       	"5B3B3E690191"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$16"
+		    quid       	"5B3B3E6A0126"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::入学"
+		    quidu      	"5B3B3E330338"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$17"
+		    quid       	"5B3B3E6A0128"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$18"
+	    quid       	"5B3B3ED00109"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$19"
+		    quid       	"5B3B3ED100DE"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::在读"
+		    quidu      	"5B3B3E700399"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$20"
+		    quid       	"5B3B3ED100E0"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$21"
+	    quid       	"5B3B3F4201F8"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$22"
+		    quid       	"5B3B3F4301C6"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::毕业"
+		    quidu      	"5B3B3F0800F8"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$23"
+		    quid       	"5B3B3F4301C8"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$24"
+	    quid       	"5B3B3FA40128"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$25"
+		    quid       	"5B3B3FA5007F"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::学费核销和奖励"
+		    quidu      	"5B3B3F6900C1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$26"
+		    quid       	"5B3B3FA50081"
+		    supplier   	"Use Case View::Use-Case Model::Actors::普通员工"
+		    quidu      	"353D5816026C")))
+	(object Association "$UNNAMED$27"
+	    quid       	"5B3B3FAD0298"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$28"
+		    quid       	"5B3B3FAE00EE"
+		    supplier   	"Use Case View::Use-Case Model::Actors::学校"
+		    quidu      	"5B3B28910292"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$29"
+		    quid       	"5B3B3FAE00F1"
+		    supplier   	"Use Case View::Use-Case Model::Actors::招生部门"
+		    quidu      	"5B3B2B7A031B")))
+	(object Association "$UNNAMED$30"
+	    quid       	"5B3D98450286"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$31"
+		    quid       	"5B3D984601B4"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::申请计划"
+		    quidu      	"5B3B3C4702F7"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$32"
+		    quid       	"5B3D984601B7"
+		    supplier   	"Use Case View::Use-Case Model::Actors::招生部"
+		    quidu      	"5B3D9829010B")))
+	(object Association "$UNNAMED$33"
+	    quid       	"5B3D98480278"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$34"
+		    quid       	"5B3D984A0377"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::报名"
+		    quidu      	"5B3B3C7B015F"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$35"
+		    quid       	"5B3D984A0379"
+		    supplier   	"Use Case View::Use-Case Model::Actors::招生部"
+		    quidu      	"5B3D9829010B")))
+	(object Association "$UNNAMED$36"
+	    quid       	"5B3D985C0251"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$37"
+		    quid       	"5B3D985D0227"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::录取"
+		    quidu      	"5B3B3D8F0368"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$38"
+		    quid       	"5B3D985D022B"
+		    supplier   	"Use Case View::Use-Case Model::Actors::招生部"
+		    quidu      	"5B3D9829010B")))
+	(object Association "$UNNAMED$39"
+	    quid       	"5B3D985F01DB"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$40"
+		    quid       	"5B3D9860027F"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::信息录入"
+		    quidu      	"5B3B3DDE0271"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$41"
+		    quid       	"5B3D98600281"
+		    supplier   	"Use Case View::Use-Case Model::Actors::招生部"
+		    quidu      	"5B3D9829010B")))
+	(object Association "$UNNAMED$42"
+	    quid       	"5B3D98790165"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$43"
+		    quid       	"5B3D987A0179"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::学费核销和奖励"
+		    quidu      	"5B3B3F6900C1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$44"
+		    quid       	"5B3D987A017B"
+		    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+		    quidu      	"5B3D871D0371")))
+	(object Association "$UNNAMED$45"
+	    quid       	"5B3D988602A5"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$46"
+		    quid       	"5B3D98880302"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::信息录入"
+		    quidu      	"5B3B3DDE0271"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$47"
+		    quid       	"5B3D98880304"
+		    supplier   	"Use Case View::Use-Case Model::Actors::人事部员工"
+		    quidu      	"5B3A1B2101A4")))
+	(object Association "$UNNAMED$48"
+	    quid       	"5B3D988C02D4"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$49"
+		    quid       	"5B3D988D0248"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::在读"
+		    quidu      	"5B3B3E700399"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$50"
+		    quid       	"5B3D988D024A"
+		    supplier   	"Use Case View::Use-Case Model::Actors::人事部员工"
+		    quidu      	"5B3A1B2101A4")))
+	(object Association "$UNNAMED$51"
+	    quid       	"5B3D988F0223"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$52"
+		    quid       	"5B3D989000D8"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::毕业"
+		    quidu      	"5B3B3F0800F8"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$53"
+		    quid       	"5B3D989000DA"
+		    supplier   	"Use Case View::Use-Case Model::Actors::人事部员工"
+		    quidu      	"5B3A1B2101A4")))
+	(object Association "$UNNAMED$54"
+	    quid       	"5B3D9892001F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$55"
+		    quid       	"5B3D98920355"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::学费核销和奖励"
+		    quidu      	"5B3B3F6900C1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$56"
+		    quid       	"5B3D98920357"
+		    supplier   	"Use Case View::Use-Case Model::Actors::人事部员工"
+		    quidu      	"5B3A1B2101A4"))))
+    logical_presentations 	(list unit_reference_list
+	(object UseCaseDiagram "NewDiagram"
+	    quid       	"5B3B27380141"
+	    title      	"NewDiagram"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	181
+	    origin_y   	203
+	    items      	(list diagram_item_list
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::入学" @1
+		    location   	(2784, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(2784, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"入学")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3E330338"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::普通员工" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1952, 1776)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1952, 1936)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	325
+			justify    	0
+			label      	"普通员工")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"353D5816026C"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$15" @3
+		    location   	(2260, 1589)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3E690191"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$16" @4
+			    Parent_View 	@3
+			    location   	(1844, -123)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3E6A0126"
+			    client     	@3
+			    supplier   	@1
+			    vertices   	(list Points
+				(2260, 1589)
+				(2512, 1441))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$17" @5
+			    Parent_View 	@3
+			    location   	(1844, -123)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3E6A0128"
+			    client     	@3
+			    supplier   	@2
+			    vertices   	(list Points
+				(2260, 1589)
+				(2009, 1738))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::申请计划" @6
+		    location   	(832, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(832, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"申请计划")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3C4702F7"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$0" @7
+		    location   	(1522, 1583)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3C510111"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @8
+			    Parent_View 	@7
+			    location   	(1122, 303)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3C51030D"
+			    client     	@7
+			    supplier   	@6
+			    vertices   	(list Points
+				(1522, 1583)
+				(1152, 1419))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$2" @9
+			    Parent_View 	@7
+			    location   	(1122, 303)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3C51030F"
+			    client     	@7
+			    supplier   	@2
+			    vertices   	(list Points
+				(1522, 1583)
+				(1892, 1748))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::报名" @10
+		    location   	(1248, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1248, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"报名")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3C7B015F"
+		    height     	118)
+		(object DependencyView "" @11
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @12
+			Parent_View 	@11
+			location   	(1018, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.397959
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3C8603C5"
+		    client     	@6
+		    supplier   	@10
+		    vertices   	(list Points
+			(940, 1280)
+			(1136, 1280))
+		    line_style 	0)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::考试" @13
+		    location   	(1648, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1648, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"考试")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3CDB00BF"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$6" @14
+		    location   	(1823, 1567)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3D6F0267"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @15
+			    Parent_View 	@14
+			    location   	(1407, -145)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3D7001F6"
+			    client     	@14
+			    supplier   	@13
+			    vertices   	(list Points
+				(1823, 1567)
+				(1746, 1441))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$8" @16
+			    Parent_View 	@14
+			    location   	(1407, -145)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3D7001F8"
+			    client     	@14
+			    supplier   	@2
+			    vertices   	(list Points
+				(1823, 1567)
+				(1901, 1694))
+			    line_style 	0)))
+		(object DependencyView "" @17
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @18
+			Parent_View 	@17
+			location   	(1428, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.397790
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3D25037D"
+		    client     	@10
+		    supplier   	@13
+		    vertices   	(list Points
+			(1356, 1280)
+			(1537, 1280))
+		    line_style 	0)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::录取" @19
+		    location   	(2032, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(2032, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"录取")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3D8F0368"
+		    height     	118)
+		(object DependencyView "" @20
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @21
+			Parent_View 	@20
+			location   	(1824, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.412121
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3DB200E5"
+		    client     	@13
+		    supplier   	@19
+		    vertices   	(list Points
+			(1756, 1280)
+			(1921, 1280))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$12" @22
+		    location   	(1981, 1567)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3DAD0090"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$13" @23
+			    Parent_View 	@22
+			    location   	(1565, -145)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3DAD0336"
+			    client     	@22
+			    supplier   	@19
+			    vertices   	(list Points
+				(1981, 1567)
+				(2001, 1441))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$14" @24
+			    Parent_View 	@22
+			    location   	(1565, -145)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3DAD0338"
+			    client     	@22
+			    supplier   	@2
+			    vertices   	(list Points
+				(1981, 1567)
+				(1962, 1694))
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::招生部" @25
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1712, 736)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@25
+			location   	(1712, 896)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	325
+			justify    	0
+			label      	"招生部")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"5B3D9829010B"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$30" @26
+		    location   	(1285, 996)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D98450286"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$31" @27
+			    Parent_View 	@26
+			    location   	(37, 340)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D984601B4"
+			    client     	@26
+			    supplier   	@6
+			    vertices   	(list Points
+				(1285, 996)
+				(919, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$32" @28
+			    Parent_View 	@26
+			    location   	(37, 340)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D984601B7"
+			    client     	@26
+			    supplier   	@25
+			    vertices   	(list Points
+				(1285, 996)
+				(1651, 770))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$33" @29
+		    location   	(1471, 1012)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D98480278"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$34" @30
+			    Parent_View 	@29
+			    location   	(223, 356)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D984A0377"
+			    client     	@29
+			    supplier   	@10
+			    vertices   	(list Points
+				(1471, 1012)
+				(1292, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$35" @31
+			    Parent_View 	@29
+			    location   	(223, 356)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D984A0379"
+			    client     	@29
+			    supplier   	@25
+			    vertices   	(list Points
+				(1471, 1012)
+				(1651, 802))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$36" @32
+		    location   	(1884, 1033)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D985C0251"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$37" @33
+			    Parent_View 	@32
+			    location   	(620, 393)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D985D0227"
+			    client     	@32
+			    supplier   	@19
+			    vertices   	(list Points
+				(1884, 1033)
+				(1995, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$38" @34
+			    Parent_View 	@32
+			    location   	(620, 393)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D985D022B"
+			    client     	@32
+			    supplier   	@25
+			    vertices   	(list Points
+				(1884, 1033)
+				(1773, 844))
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @35
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(3024, 672)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(3024, 832)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	328
+			justify    	0
+			label      	"财务部员工")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"5B3D871D0371"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::信息录入" @36
+		    location   	(2416, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(2416, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"信息录入")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3DDE0271"
+		    height     	118)
+		(object DependencyView "" @37
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @38
+			Parent_View 	@37
+			location   	(2206, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.400000
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3DF80035"
+		    client     	@19
+		    supplier   	@36
+		    vertices   	(list Points
+			(2140, 1280)
+			(2305, 1280))
+		    line_style 	0)
+		(object DependencyView "" @39
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @40
+			Parent_View 	@39
+			location   	(2582, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.391892
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3E3F036D"
+		    client     	@36
+		    supplier   	@1
+		    vertices   	(list Points
+			(2524, 1280)
+			(2672, 1280))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$39" @41
+		    location   	(2055, 1001)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D985F01DB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$40" @42
+			    Parent_View 	@41
+			    location   	(791, 361)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D9860027F"
+			    client     	@41
+			    supplier   	@36
+			    vertices   	(list Points
+				(2055, 1001)
+				(2342, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$41" @43
+			    Parent_View 	@41
+			    location   	(791, 361)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D98600281"
+			    client     	@41
+			    supplier   	@25
+			    vertices   	(list Points
+				(2055, 1001)
+				(1769, 780))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::在读" @44
+		    location   	(3136, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(3136, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"在读")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3E700399"
+		    height     	118)
+		(object DependencyView "" @45
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @46
+			Parent_View 	@45
+			location   	(2939, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.350746
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3EE80056"
+		    client     	@1
+		    supplier   	@44
+		    vertices   	(list Points
+			(2892, 1280)
+			(3026, 1280))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$18" @47
+		    location   	(2412, 1580)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3ED00109"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$19" @48
+			    Parent_View 	@47
+			    location   	(1996, -132)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3ED100DE"
+			    client     	@47
+			    supplier   	@44
+			    vertices   	(list Points
+				(2412, 1580)
+				(2815, 1411))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$20" @49
+			    Parent_View 	@47
+			    location   	(1996, -132)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3ED100E0"
+			    client     	@47
+			    supplier   	@2
+			    vertices   	(list Points
+				(2412, 1580)
+				(2009, 1749))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::毕业" @50
+		    location   	(3488, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(3488, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"毕业")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3F0800F8"
+		    height     	118)
+		(object DependencyView "" @51
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @52
+			Parent_View 	@51
+			location   	(3270, 1328)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.194030
+			height     	48
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3F1203D5"
+		    client     	@44
+		    supplier   	@50
+		    vertices   	(list Points
+			(3244, 1280)
+			(3378, 1280))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$21" @53
+		    location   	(2588, 1568)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3F4201F8"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$22" @54
+			    Parent_View 	@53
+			    location   	(2172, -144)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3F4301C6"
+			    client     	@53
+			    supplier   	@50
+			    vertices   	(list Points
+				(2588, 1568)
+				(3167, 1381))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$23" @55
+			    Parent_View 	@53
+			    location   	(2172, -144)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3F4301C8"
+			    client     	@53
+			    supplier   	@2
+			    vertices   	(list Points
+				(2588, 1568)
+				(2009, 1755))
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::人事部员工" @56
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2416, 704)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(2416, 864)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	331
+			justify    	0
+			label      	"人事部员工")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"5B3A1B2101A4"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$45" @57
+		    location   	(2416, 1075)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D988602A5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$46" @58
+			    Parent_View 	@57
+			    location   	(-96, 419)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D98880302"
+			    client     	@57
+			    supplier   	@36
+			    vertices   	(list Points
+				(2416, 1075)
+				(2416, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$47" @59
+			    Parent_View 	@57
+			    location   	(-96, 419)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D98880304"
+			    client     	@57
+			    supplier   	@56
+			    vertices   	(list Points
+				(2416, 1075)
+				(2416, 929))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$48" @60
+		    location   	(2789, 1002)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D988C02D4"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$49" @61
+			    Parent_View 	@60
+			    location   	(277, 346)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D988D0248"
+			    client     	@60
+			    supplier   	@44
+			    vertices   	(list Points
+				(2789, 1002)
+				(3064, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$50" @62
+			    Parent_View 	@60
+			    location   	(277, 346)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D988D024A"
+			    client     	@60
+			    supplier   	@56
+			    vertices   	(list Points
+				(2789, 1002)
+				(2515, 782))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$51" @63
+		    location   	(2928, 978)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D988F0223"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$52" @64
+			    Parent_View 	@63
+			    location   	(416, 322)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D989000D8"
+			    client     	@63
+			    supplier   	@50
+			    vertices   	(list Points
+				(2928, 978)
+				(3384, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$53" @65
+			    Parent_View 	@63
+			    location   	(416, 322)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D989000DA"
+			    client     	@63
+			    supplier   	@56
+			    vertices   	(list Points
+				(2928, 978)
+				(2473, 734))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::学费核销和奖励" @66
+		    location   	(3840, 1280)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@66
+			location   	(3840, 1418)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"学费核销和奖励")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3B3F6900C1"
+		    height     	118)
+		(object DependencyView "" @67
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @68
+			Parent_View 	@67
+			location   	(3616, 1332)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	0.149254
+			height     	52
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"5B3B3F8100A6"
+		    client     	@50
+		    supplier   	@66
+		    vertices   	(list Points
+			(3596, 1280)
+			(3730, 1280))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$24" @69
+		    location   	(2764, 1560)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3B3FA40128"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$25" @70
+			    Parent_View 	@69
+			    location   	(812, -216)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3FA5007F"
+			    client     	@69
+			    supplier   	@66
+			    vertices   	(list Points
+				(2764, 1560)
+				(3519, 1361))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$26" @71
+			    Parent_View 	@69
+			    location   	(812, -216)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3B3FA50081"
+			    client     	@69
+			    supplier   	@2
+			    vertices   	(list Points
+				(2764, 1560)
+				(2009, 1759))
+			    line_style 	0)))
+		(object DependencyView "" @72
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @73
+			Parent_View 	@72
+			location   	(2470, 1350)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<extend>>"
+			pctDist    	1.031773
+			height     	40
+			orientation 	0)
+		    line_color 	3342489
+		    quidu      	"5B3B3FD2031E"
+		    client     	@66
+		    supplier   	@36
+		    vertices   	(list Points
+			(3557, 1441)
+			(3160, 1669)
+			(2726, 1441))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$42" @74
+		    location   	(3421, 967)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D98790165"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$43" @75
+			    Parent_View 	@74
+			    location   	(397, 295)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D987A0179"
+			    client     	@74
+			    supplier   	@66
+			    vertices   	(list Points
+				(3421, 967)
+				(3762, 1222))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$44" @76
+			    Parent_View 	@74
+			    location   	(397, 295)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D987A017B"
+			    client     	@74
+			    supplier   	@35
+			    vertices   	(list Points
+				(3421, 967)
+				(3081, 713))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$54" @77
+		    location   	(3101, 979)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3D9892001F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$55" @78
+			    Parent_View 	@77
+			    location   	(589, 323)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D98920355"
+			    client     	@77
+			    supplier   	@66
+			    vertices   	(list Points
+				(3101, 979)
+				(3730, 1233))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$56" @79
+			    Parent_View 	@77
+			    location   	(589, 323)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D98920357"
+			    client     	@77
+			    supplier   	@56
+			    vertices   	(list Points
+				(3101, 979)
+				(2473, 726))
+			    line_style 	0)))))))

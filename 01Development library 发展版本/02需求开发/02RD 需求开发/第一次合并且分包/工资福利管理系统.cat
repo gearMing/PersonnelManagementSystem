@@ -1,0 +1,4254 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	134)
+
+(object Class_Category "工资福利管理系统"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5B3A1BCA00A1"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class_Category "建账"
+	    quid       	"5B3C37BC0063"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置工资类别个数、币种"
+		    quid       	"5B3C38560367")
+		(object UseCase "设置个人所得税"
+		    quid       	"5B3C386E0100")
+		(object UseCase "设置扣零处理"
+		    quid       	"5B3C387C038A")
+		(object UseCase "工资类别管理"
+		    quid       	"5B3C388D035E")
+		(object Association "$UNNAMED$0"
+		    quid       	"5B3C38960163"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$1"
+			    quid       	"5B3C3897026C"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::设置工资类别个数、币种"
+			    quidu      	"5B3C38560367"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$2"
+			    quid       	"5B3C3897026E"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$3"
+		    quid       	"5B3C3899034B"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$4"
+			    quid       	"5B3C389A02FC"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::设置个人所得税"
+			    quidu      	"5B3C386E0100"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$5"
+			    quid       	"5B3C389A02FE"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$6"
+		    quid       	"5B3C389C01D3"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$7"
+			    quid       	"5B3C389D015C"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::设置扣零处理"
+			    quidu      	"5B3C387C038A"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$8"
+			    quid       	"5B3C389D015E"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$9"
+		    quid       	"5B3C389F01E3"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$10"
+			    quid       	"5B3C38A0021B"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::工资类别管理"
+			    quidu      	"5B3C388D035E"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$11"
+			    quid       	"5B3C38A0021D"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "建账Use Case"
+		    quid       	"5B3C383703C1"
+		    title      	"建账Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::设置工资类别个数、币种" @1
+			    location   	(1200, 336)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@1
+				location   	(1200, 474)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置工资类别个数、币种")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C38560367"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::设置个人所得税" @2
+			    location   	(1184, 800)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(1184, 938)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置个人所得税")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C386E0100"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::设置扣零处理" @3
+			    location   	(1200, 1232)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(1200, 1370)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置扣零处理")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C387C038A"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::建账::工资类别管理" @4
+			    location   	(1216, 1664)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@4
+				location   	(1216, 1802)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"工资类别管理")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C388D035E"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @5
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(256, 784)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@5
+				location   	(256, 944)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$0" @6
+			    location   	(650, 593)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C38960163"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$1" @7
+				    Parent_View 	@6
+				    location   	(346, -175)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3897026C"
+				    client     	@6
+				    supplier   	@1
+				    vertices   	(list Points
+					(650, 593)
+					(988, 434))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$2" @8
+				    Parent_View 	@6
+				    location   	(346, -175)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3897026E"
+				    client     	@6
+				    supplier   	@5
+				    vertices   	(list Points
+					(650, 593)
+					(313, 753))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$3" @9
+			    location   	(693, 790)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3899034B"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$4" @10
+				    Parent_View 	@9
+				    location   	(389, 22)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C389A02FC"
+				    client     	@9
+				    supplier   	@2
+				    vertices   	(list Points
+					(693, 790)
+					(1074, 796))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$5" @11
+				    Parent_View 	@9
+				    location   	(389, 22)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C389A02FE"
+				    client     	@9
+				    supplier   	@5
+				    vertices   	(list Points
+					(693, 790)
+					(313, 784))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$6" @12
+			    location   	(701, 994)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C389C01D3"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$7" @13
+				    Parent_View 	@12
+				    location   	(397, 226)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C389D015C"
+				    client     	@12
+				    supplier   	@3
+				    vertices   	(list Points
+					(701, 994)
+					(1089, 1178))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$8" @14
+				    Parent_View 	@12
+				    location   	(397, 226)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C389D015E"
+				    client     	@12
+				    supplier   	@5
+				    vertices   	(list Points
+					(701, 994)
+					(313, 811))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$9" @15
+			    location   	(731, 1221)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C389F01E3"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$10" @16
+				    Parent_View 	@15
+				    location   	(427, 453)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C38A0021B"
+				    client     	@15
+				    supplier   	@4
+				    vertices   	(list Points
+					(731, 1221)
+					(1150, 1605))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$11" @17
+				    Parent_View 	@15
+				    location   	(427, 453)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C38A0021D"
+				    client     	@15
+				    supplier   	@5
+				    vertices   	(list Points
+					(731, 1221)
+					(313, 837))
+				    line_style 	0)))))))
+	(object Class_Category "工资工作和工资变动流程"
+	    quid       	"5B3C37C802EA"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object Class_Category "工资工作流程"
+		    quid       	"5B3C3994037E"
+		    exportControl 	"Public"
+		    logical_models 	(list unit_reference_list
+			(object UseCase "国家工资流程"
+			    quid       	"5B3C39DD02F3")
+			(object UseCase "院内津贴流程"
+			    quid       	"5B3C39F30206")
+			(object UseCase "临时性津贴流程"
+			    quid       	"5B3C3A0301D9")
+			(object Association "$UNNAMED$12"
+			    quid       	"5B3C3A0B0218"
+			    roles      	(list role_list
+				(object Role "$UNNAMED$13"
+				    quid       	"5B3C3A0C015C"
+				    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资工作流程::国家工资流程"
+				    quidu      	"5B3C39DD02F3"
+				    is_navigable 	TRUE)
+				(object Role "$UNNAMED$14"
+				    quid       	"5B3C3A0C015E"
+				    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+				    quidu      	"5B3D871D0371")))
+			(object Association "$UNNAMED$15"
+			    quid       	"5B3C3A0D0298"
+			    roles      	(list role_list
+				(object Role "$UNNAMED$16"
+				    quid       	"5B3C3A0E0143"
+				    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资工作流程::院内津贴流程"
+				    quidu      	"5B3C39F30206"
+				    is_navigable 	TRUE)
+				(object Role "$UNNAMED$17"
+				    quid       	"5B3C3A0E0145"
+				    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+				    quidu      	"5B3D871D0371")))
+			(object Association "$UNNAMED$18"
+			    quid       	"5B3C3A0F0271"
+			    roles      	(list role_list
+				(object Role "$UNNAMED$19"
+				    quid       	"5B3C3A100194"
+				    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资工作流程::临时性津贴流程"
+				    quidu      	"5B3C3A0301D9"
+				    is_navigable 	TRUE)
+				(object Role "$UNNAMED$20"
+				    quid       	"5B3C3A100196"
+				    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+				    quidu      	"5B3D871D0371"))))
+		    logical_presentations 	(list unit_reference_list
+			(object UseCaseDiagram "工资工作流程Use Case"
+			    quid       	"5B3C39B50197"
+			    title      	"工资工作流程Use Case"
+			    zoom       	100
+			    max_height 	28350
+			    max_width  	21600
+			    origin_x   	0
+			    origin_y   	0
+			    items      	(list diagram_item_list
+				(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资工作流程::国家工资流程" @18
+				    location   	(1344, 240)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@18
+					location   	(1344, 378)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	630
+					justify    	0
+					label      	"国家工资流程")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5B3C39DD02F3"
+				    height     	118)
+				(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资工作流程::院内津贴流程" @19
+				    location   	(1328, 736)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@19
+					location   	(1328, 874)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	630
+					justify    	0
+					label      	"院内津贴流程")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5B3C39F30206"
+				    height     	118)
+				(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资工作流程::临时性津贴流程" @20
+				    location   	(1360, 1264)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@20
+					location   	(1360, 1402)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	630
+					justify    	0
+					label      	"临时性津贴流程")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5B3C3A0301D9"
+				    height     	118)
+				(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @21
+				    ShowCompartmentStereotypes 	TRUE
+				    IncludeAttribute 	TRUE
+				    IncludeOperation 	TRUE
+				    location   	(320, 640)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@21
+					location   	(320, 800)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	325
+					justify    	0
+					label      	"财务部员工")
+				    icon       	"Actor"
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    quidu      	"5B3D871D0371"
+				    annotation 	8
+				    autoResize 	TRUE)
+				(object AssociationViewNew "$UNNAMED$12" @22
+				    location   	(805, 445)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3A0B0218"
+				    roleview_list 	(list RoleViews
+					(object RoleView "$UNNAMED$13" @23
+					    Parent_View 	@22
+					    location   	(485, -195)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A0C015C"
+					    client     	@22
+					    supplier   	@18
+					    vertices   	(list Points
+						(805, 445)
+						(1233, 279))
+					    line_style 	0)
+					(object RoleView "$UNNAMED$14" @24
+					    Parent_View 	@22
+					    location   	(485, -195)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A0C015E"
+					    client     	@22
+					    supplier   	@21
+					    vertices   	(list Points
+						(805, 445)
+						(377, 612))
+					    line_style 	0)))
+				(object AssociationViewNew "$UNNAMED$15" @25
+				    location   	(797, 682)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3A0D0298"
+				    roleview_list 	(list RoleViews
+					(object RoleView "$UNNAMED$16" @26
+					    Parent_View 	@25
+					    location   	(477, 42)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A0E0143"
+					    client     	@25
+					    supplier   	@19
+					    vertices   	(list Points
+						(797, 682)
+						(1217, 721))
+					    line_style 	0)
+					(object RoleView "$UNNAMED$17" @27
+					    Parent_View 	@25
+					    location   	(477, 42)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A0E0145"
+					    client     	@25
+					    supplier   	@21
+					    vertices   	(list Points
+						(797, 682)
+						(377, 644))
+					    line_style 	0)))
+				(object AssociationViewNew "$UNNAMED$18" @28
+				    location   	(820, 939)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3A0F0271"
+				    roleview_list 	(list RoleViews
+					(object RoleView "$UNNAMED$19" @29
+					    Parent_View 	@28
+					    location   	(500, 299)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A100194"
+					    client     	@28
+					    supplier   	@20
+					    vertices   	(list Points
+						(820, 939)
+						(1264, 1205))
+					    line_style 	0)
+					(object RoleView "$UNNAMED$20" @30
+					    Parent_View 	@28
+					    location   	(500, 299)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A100196"
+					    client     	@28
+					    supplier   	@21
+					    vertices   	(list Points
+						(820, 939)
+						(377, 673))
+					    line_style 	0)))))))
+		(object Class_Category "工资变动维护流程"
+		    quid       	"5B3C39A7015E"
+		    exportControl 	"Public"
+		    logical_models 	(list unit_reference_list
+			(object UseCase "国家工资变动流程"
+			    quid       	"5B3C3A3E024F")
+			(object UseCase "院内津贴变动流程"
+			    quid       	"5B3C3A4B03D5")
+			(object Association "$UNNAMED$21"
+			    quid       	"5B3C3A5500CC"
+			    roles      	(list role_list
+				(object Role "$UNNAMED$22"
+				    quid       	"5B3C3A550395"
+				    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资变动维护流程::国家工资变动流程"
+				    quidu      	"5B3C3A3E024F"
+				    is_navigable 	TRUE)
+				(object Role "$UNNAMED$23"
+				    quid       	"5B3C3A550397"
+				    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+				    quidu      	"5B3D871D0371")))
+			(object Association "$UNNAMED$24"
+			    quid       	"5B3C3A570200"
+			    roles      	(list role_list
+				(object Role "$UNNAMED$25"
+				    quid       	"5B3C3A580154"
+				    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资变动维护流程::院内津贴变动流程"
+				    quidu      	"5B3C3A4B03D5"
+				    is_navigable 	TRUE)
+				(object Role "$UNNAMED$26"
+				    quid       	"5B3C3A580156"
+				    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+				    quidu      	"5B3D871D0371"))))
+		    logical_presentations 	(list unit_reference_list
+			(object UseCaseDiagram "工资变动维护流程Use Case"
+			    quid       	"5B3C3A180148"
+			    title      	"工资变动维护流程Use Case"
+			    zoom       	100
+			    max_height 	28350
+			    max_width  	21600
+			    origin_x   	0
+			    origin_y   	0
+			    items      	(list diagram_item_list
+				(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资变动维护流程::国家工资变动流程" @31
+				    location   	(1328, 320)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@31
+					location   	(1328, 458)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	630
+					justify    	0
+					label      	"国家工资变动流程")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5B3C3A3E024F"
+				    height     	118)
+				(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资工作和工资变动流程::工资变动维护流程::院内津贴变动流程" @32
+				    location   	(1312, 1056)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@32
+					location   	(1312, 1194)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	630
+					justify    	0
+					label      	"院内津贴变动流程")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5B3C3A4B03D5"
+				    height     	118)
+				(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @33
+				    ShowCompartmentStereotypes 	TRUE
+				    IncludeAttribute 	TRUE
+				    IncludeOperation 	TRUE
+				    location   	(496, 592)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@33
+					location   	(496, 752)
+					anchor_loc 	1
+					nlines     	2
+					max_width  	325
+					justify    	0
+					label      	"财务部员工")
+				    icon       	"Actor"
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    quidu      	"5B3D871D0371"
+				    annotation 	8
+				    autoResize 	TRUE)
+				(object AssociationViewNew "$UNNAMED$21" @34
+				    location   	(885, 461)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3A5500CC"
+				    roleview_list 	(list RoleViews
+					(object RoleView "$UNNAMED$22" @35
+					    Parent_View 	@34
+					    location   	(389, -131)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A550395"
+					    client     	@34
+					    supplier   	@31
+					    vertices   	(list Points
+						(885, 461)
+						(1218, 353))
+					    line_style 	0)
+					(object RoleView "$UNNAMED$23" @36
+					    Parent_View 	@34
+					    location   	(389, -131)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A550397"
+					    client     	@34
+					    supplier   	@33
+					    vertices   	(list Points
+						(885, 461)
+						(553, 569))
+					    line_style 	0)))
+				(object AssociationViewNew "$UNNAMED$24" @37
+				    location   	(882, 810)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3A570200"
+				    roleview_list 	(list RoleViews
+					(object RoleView "$UNNAMED$25" @38
+					    Parent_View 	@37
+					    location   	(386, 218)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A580154"
+					    client     	@37
+					    supplier   	@32
+					    vertices   	(list Points
+						(882, 810)
+						(1211, 997))
+					    line_style 	0)
+					(object RoleView "$UNNAMED$26" @39
+					    Parent_View 	@37
+					    location   	(386, 218)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5B3C3A580156"
+					    client     	@37
+					    supplier   	@33
+					    vertices   	(list Points
+						(882, 810)
+						(553, 623))
+					    line_style 	0))))))))
+	    logical_presentations 	(list unit_reference_list))
+	(object Class_Category "基础设置"
+	    quid       	"5B3C37D402AA"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置工资项目"
+		    quid       	"5B3C3A8D0160")
+		(object UseCase "设置银行名称"
+		    quid       	"5B3C3A9600BE")
+		(object UseCase "设置工资权限"
+		    quid       	"5B3C3AA1028D")
+		(object Association "$UNNAMED$27"
+		    quid       	"5B3C3AAE0160"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$28"
+			    quid       	"5B3C3AAE0394"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::基础设置::设置工资项目"
+			    quidu      	"5B3C3A8D0160"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$29"
+			    quid       	"5B3C3AAE0396"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$30"
+		    quid       	"5B3C3AB000DB"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$31"
+			    quid       	"5B3C3AB002DC"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::基础设置::设置银行名称"
+			    quidu      	"5B3C3A9600BE"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$32"
+			    quid       	"5B3C3AB002DE"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$33"
+		    quid       	"5B3C3AB20061"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$34"
+			    quid       	"5B3C3AB20364"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::基础设置::设置工资权限"
+			    quidu      	"5B3C3AA1028D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$35"
+			    quid       	"5B3C3AB20366"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "基础设置Use Case"
+		    quid       	"5B3C3A6C023E"
+		    title      	"基础设置Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::基础设置::设置工资项目" @40
+			    location   	(1152, 240)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@40
+				location   	(1152, 378)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置工资项目")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3A8D0160"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::基础设置::设置银行名称" @41
+			    location   	(1136, 704)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@41
+				location   	(1136, 842)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置银行名称")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3A9600BE"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::基础设置::设置工资权限" @42
+			    location   	(1152, 1152)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@42
+				location   	(1152, 1290)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置工资权限")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3AA1028D"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @43
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(384, 512)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@43
+				location   	(384, 672)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$27" @44
+			    location   	(741, 380)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3AAE0160"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$28" @45
+				    Parent_View 	@44
+				    location   	(357, -132)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3AAE0394"
+				    client     	@44
+				    supplier   	@40
+				    vertices   	(list Points
+					(741, 380)
+					(1041, 275))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$29" @46
+				    Parent_View 	@44
+				    location   	(357, -132)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3AAE0396"
+				    client     	@44
+				    supplier   	@43
+				    vertices   	(list Points
+					(741, 380)
+					(441, 486))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$30" @47
+			    location   	(733, 599)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3AB000DB"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$31" @48
+				    Parent_View 	@47
+				    location   	(349, 87)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3AB002DC"
+				    client     	@47
+				    supplier   	@41
+				    vertices   	(list Points
+					(733, 599)
+					(1025, 674))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$32" @49
+				    Parent_View 	@47
+				    location   	(349, 87)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3AB002DE"
+				    client     	@47
+				    supplier   	@43
+				    vertices   	(list Points
+					(733, 599)
+					(441, 524))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$33" @50
+			    location   	(761, 827)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3AB20061"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$34" @51
+				    Parent_View 	@50
+				    location   	(377, 315)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3AB20364"
+				    client     	@50
+				    supplier   	@42
+				    vertices   	(list Points
+					(761, 827)
+					(1081, 1094))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$35" @52
+				    Parent_View 	@50
+				    location   	(377, 315)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3AB20366"
+				    client     	@50
+				    supplier   	@43
+				    vertices   	(list Points
+					(761, 827)
+					(441, 560))
+				    line_style 	0)))))))
+	(object Class_Category "工资变动"
+	    quid       	"5B3C37DC02C6"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置工资项目"
+		    quid       	"5B3C3AFF00AA")
+		(object UseCase "设置计算公式"
+		    quid       	"5B3C3B220377")
+		(object UseCase "页编辑录入"
+		    quid       	"5B3C3B36003E")
+		(object UseCase "过滤工资项目"
+		    quid       	"5B3C3B400187")
+		(object UseCase "重算工资"
+		    quid       	"5B3C3B4A030E")
+		(object UseCase "汇总工资"
+		    quid       	"5B3C3B530350")
+		(object Association "$UNNAMED$36"
+		    quid       	"5B3C3B670201"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$37"
+			    quid       	"5B3C3B6800F4"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::设置计算公式"
+			    quidu      	"5B3C3B220377"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$38"
+			    quid       	"5B3C3B6800F6"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$39"
+		    quid       	"5B3C3B6A002E"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$40"
+			    quid       	"5B3C3B6A0344"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::设置工资项目"
+			    quidu      	"5B3C3AFF00AA"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$41"
+			    quid       	"5B3C3B6A0346"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$42"
+		    quid       	"5B3C3B7502AF"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$43"
+			    quid       	"5B3C3B7601C5"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::页编辑录入"
+			    quidu      	"5B3C3B36003E"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$44"
+			    quid       	"5B3C3B7601C7"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$45"
+		    quid       	"5B3C3B78011E"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$46"
+			    quid       	"5B3C3B790050"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::重算工资"
+			    quidu      	"5B3C3B4A030E"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$47"
+			    quid       	"5B3C3B790052"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$48"
+		    quid       	"5B3C3B7B0000"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$49"
+			    quid       	"5B3C3B7B02AC"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::过滤工资项目"
+			    quidu      	"5B3C3B400187"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$50"
+			    quid       	"5B3C3B7B02AE"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$51"
+		    quid       	"5B3C3B7D033E"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$52"
+			    quid       	"5B3C3B7E031C"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::汇总工资"
+			    quidu      	"5B3C3B530350"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$53"
+			    quid       	"5B3C3B7E031E"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "工资变动Use Case"
+		    quid       	"5B3C3AB80177"
+		    title      	"工资变动Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::设置计算公式" @53
+			    location   	(1824, 512)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@53
+				location   	(1824, 650)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置计算公式")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3B220377"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::设置工资项目" @54
+			    location   	(880, 528)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@54
+				location   	(880, 666)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置工资项目")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3AFF00AA"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::页编辑录入" @55
+			    location   	(496, 896)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@55
+				location   	(496, 1034)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"页编辑录入")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3B36003E"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::重算工资" @56
+			    location   	(2192, 928)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@56
+				location   	(2192, 1066)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"重算工资")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3B4A030E"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::过滤工资项目" @57
+			    location   	(944, 1552)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@57
+				location   	(944, 1690)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"过滤工资项目")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3B400187"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资变动::汇总工资" @58
+			    location   	(1856, 1584)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@58
+				location   	(1856, 1722)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"汇总工资")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3B530350"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @59
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(1280, 960)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@59
+				location   	(1280, 1120)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$36" @60
+			    location   	(1521, 758)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3B670201"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$37" @61
+				    Parent_View 	@60
+				    location   	(225, -202)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B6800F4"
+				    client     	@60
+				    supplier   	@53
+				    vertices   	(list Points
+					(1521, 758)
+					(1706, 608))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$38" @62
+				    Parent_View 	@60
+				    location   	(225, -202)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B6800F6"
+				    client     	@60
+				    supplier   	@59
+				    vertices   	(list Points
+					(1521, 758)
+					(1337, 908))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$39" @63
+			    location   	(1109, 774)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3B6A002E"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$40" @64
+				    Parent_View 	@63
+				    location   	(-187, -186)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B6A0344"
+				    client     	@63
+				    supplier   	@54
+				    vertices   	(list Points
+					(1109, 774)
+					(997, 654))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$41" @65
+				    Parent_View 	@63
+				    location   	(-187, -186)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B6A0346"
+				    client     	@63
+				    supplier   	@59
+				    vertices   	(list Points
+					(1109, 774)
+					(1221, 895))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$42" @66
+			    location   	(911, 926)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3B7502AF"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$43" @67
+				    Parent_View 	@66
+				    location   	(-369, -34)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B7601C5"
+				    client     	@66
+				    supplier   	@55
+				    vertices   	(list Points
+					(911, 926)
+					(604, 901))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$44" @68
+				    Parent_View 	@66
+				    location   	(-369, -34)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B7601C7"
+				    client     	@66
+				    supplier   	@59
+				    vertices   	(list Points
+					(911, 926)
+					(1219, 952))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$45" @69
+			    location   	(1708, 942)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3B78011E"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$46" @70
+				    Parent_View 	@69
+				    location   	(428, -18)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B790050"
+				    client     	@69
+				    supplier   	@56
+				    vertices   	(list Points
+					(1708, 942)
+					(2080, 929))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$47" @71
+				    Parent_View 	@69
+				    location   	(428, -18)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B790052"
+				    client     	@69
+				    supplier   	@59
+				    vertices   	(list Points
+					(1708, 942)
+					(1337, 955))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$48" @72
+			    location   	(1083, 1304)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3B7B0000"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$49" @73
+				    Parent_View 	@72
+				    location   	(-197, 344)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B7B02AC"
+				    client     	@72
+				    supplier   	@57
+				    vertices   	(list Points
+					(1083, 1304)
+					(974, 1493))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$50" @74
+				    Parent_View 	@72
+				    location   	(-197, 344)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B7B02AE"
+				    client     	@72
+				    supplier   	@59
+				    vertices   	(list Points
+					(1083, 1304)
+					(1193, 1115))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$51" @75
+			    location   	(1583, 1289)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3B7D033E"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$52" @76
+				    Parent_View 	@75
+				    location   	(303, 329)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B7E031C"
+				    client     	@75
+				    supplier   	@58
+				    vertices   	(list Points
+					(1583, 1289)
+					(1800, 1525))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$53" @77
+				    Parent_View 	@75
+				    location   	(303, 329)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3B7E031E"
+				    client     	@75
+				    supplier   	@59
+				    vertices   	(list Points
+					(1583, 1289)
+					(1366, 1053))
+				    line_style 	0)))))))
+	(object Class_Category "个人所得税的计算和申报"
+	    quid       	"5B3C37E602DF"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置申报表"
+		    quid       	"5B3C3BAA0160")
+		(object UseCase "设置个人所得税税率"
+		    quid       	"5B3C3BB40266")
+		(object Association "$UNNAMED$54"
+		    quid       	"5B3C3BC300C1"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$55"
+			    quid       	"5B3C3BC30305"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::个人所得税的计算和申报::设置申报表"
+			    quidu      	"5B3C3BAA0160"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$56"
+			    quid       	"5B3C3BC30307"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$57"
+		    quid       	"5B3C3BC50079"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$58"
+			    quid       	"5B3C3BC502C6"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::个人所得税的计算和申报::设置个人所得税税率"
+			    quidu      	"5B3C3BB40266"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$59"
+			    quid       	"5B3C3BC502C8"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "个人所得税的计算和申报Use Case"
+		    quid       	"5B3C3B9102CF"
+		    title      	"个人所得税的计算和申报Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::个人所得税的计算和申报::设置申报表" @78
+			    location   	(1312, 304)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@78
+				location   	(1312, 442)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置申报表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3BAA0160"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::个人所得税的计算和申报::设置个人所得税税率" @79
+			    location   	(1360, 1040)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@79
+				location   	(1360, 1178)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置个人所得税税率")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3BB40266"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @80
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(464, 592)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@80
+				location   	(464, 752)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$54" @81
+			    location   	(861, 455)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3BC300C1"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$55" @82
+				    Parent_View 	@81
+				    location   	(397, -137)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3BC30305"
+				    client     	@81
+				    supplier   	@78
+				    vertices   	(list Points
+					(861, 455)
+					(1202, 339))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$56" @83
+				    Parent_View 	@81
+				    location   	(397, -137)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3BC30307"
+				    client     	@81
+				    supplier   	@80
+				    vertices   	(list Points
+					(861, 455)
+					(521, 571))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$57" @84
+			    location   	(885, 801)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3BC50079"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$58" @85
+				    Parent_View 	@84
+				    location   	(421, 209)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3BC502C6"
+				    client     	@84
+				    supplier   	@79
+				    vertices   	(list Points
+					(885, 801)
+					(1250, 984))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$59" @86
+				    Parent_View 	@84
+				    location   	(421, 209)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3BC502C8"
+				    client     	@84
+				    supplier   	@80
+				    vertices   	(list Points
+					(885, 801)
+					(521, 619))
+				    line_style 	0)))))))
+	(object Class_Category "工资分钱清单"
+	    quid       	"5B3C37F2036E"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置票面额"
+		    quid       	"5B3C3BDF03D7")
+		(object UseCase "生成部门分钱清单"
+		    quid       	"5B3C3BF10053")
+		(object UseCase "生成人员分钱清单"
+		    quid       	"5B3C3C070357")
+		(object UseCase "生成工资发放取款单"
+		    quid       	"5B3C3C1A0142")
+		(object Association "$UNNAMED$60"
+		    quid       	"5B3C3C2202EE"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$61"
+			    quid       	"5B3C3C2301BD"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::设置票面额"
+			    quidu      	"5B3C3BDF03D7"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$62"
+			    quid       	"5B3C3C2301BF"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$63"
+		    quid       	"5B3C3C240393"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$64"
+			    quid       	"5B3C3C250291"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::生成部门分钱清单"
+			    quidu      	"5B3C3BF10053"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$65"
+			    quid       	"5B3C3C250293"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$66"
+		    quid       	"5B3C3C27002E"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$67"
+			    quid       	"5B3C3C270321"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::生成人员分钱清单"
+			    quidu      	"5B3C3C070357"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$68"
+			    quid       	"5B3C3C270323"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$69"
+		    quid       	"5B3C3C29005F"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$70"
+			    quid       	"5B3C3C2903A8"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::生成工资发放取款单"
+			    quidu      	"5B3C3C1A0142"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$71"
+			    quid       	"5B3C3C2903AA"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "工资分钱清单Use Case"
+		    quid       	"5B3C3BD0036C"
+		    title      	"工资分钱清单Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::设置票面额" @87
+			    location   	(1472, 304)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@87
+				location   	(1472, 442)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置票面额")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3BDF03D7"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::生成部门分钱清单" @88
+			    location   	(1472, 640)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@88
+				location   	(1472, 778)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成部门分钱清单")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3BF10053"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::生成人员分钱清单" @89
+			    location   	(1456, 992)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@89
+				location   	(1456, 1130)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成人员分钱清单")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3C070357"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分钱清单::生成工资发放取款单" @90
+			    location   	(1472, 1424)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@90
+				location   	(1472, 1562)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成工资发放取款单")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3C1A0142"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @91
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(496, 800)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@91
+				location   	(496, 960)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$60" @92
+			    location   	(957, 561)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3C2202EE"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$61" @93
+				    Parent_View 	@92
+				    location   	(637, 1)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C2301BD"
+				    client     	@92
+				    supplier   	@87
+				    vertices   	(list Points
+					(957, 561)
+					(1361, 356))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$62" @94
+				    Parent_View 	@92
+				    location   	(637, 1)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C2301BF"
+				    client     	@92
+				    supplier   	@91
+				    vertices   	(list Points
+					(957, 561)
+					(553, 767))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$63" @95
+			    location   	(957, 720)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3C240393"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$64" @96
+				    Parent_View 	@95
+				    location   	(637, 160)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C250291"
+				    client     	@95
+				    supplier   	@88
+				    vertices   	(list Points
+					(957, 720)
+					(1361, 653))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$65" @97
+				    Parent_View 	@95
+				    location   	(637, 160)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C250293"
+				    client     	@95
+				    supplier   	@91
+				    vertices   	(list Points
+					(957, 720)
+					(553, 787))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$66" @98
+			    location   	(949, 888)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3C27002E"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$67" @99
+				    Parent_View 	@98
+				    location   	(629, 328)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C270321"
+				    client     	@98
+				    supplier   	@89
+				    vertices   	(list Points
+					(949, 888)
+					(1346, 968))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$68" @100
+				    Parent_View 	@98
+				    location   	(629, 328)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C270323"
+				    client     	@98
+				    supplier   	@91
+				    vertices   	(list Points
+					(949, 888)
+					(553, 809))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$69" @101
+			    location   	(967, 1100)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3C29005F"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$70" @102
+				    Parent_View 	@101
+				    location   	(647, 540)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C2903A8"
+				    client     	@101
+				    supplier   	@90
+				    vertices   	(list Points
+					(967, 1100)
+					(1381, 1365))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$71" @103
+				    Parent_View 	@101
+				    location   	(647, 540)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3C2903AA"
+				    client     	@101
+				    supplier   	@91
+				    vertices   	(list Points
+					(967, 1100)
+					(553, 836))
+				    line_style 	0)))))))
+	(object Class_Category "银行代发"
+	    quid       	"5B3C37FF036E"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置银行代发文件格式"
+		    quid       	"5B3C3E89032B")
+		(object UseCase "设置由银行代发的员工"
+		    quid       	"5B3C3ED70355")
+		(object Association "$UNNAMED$72"
+		    quid       	"5B3C3EB00388"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$73"
+			    quid       	"5B3C3EB102E8"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::银行代发::设置银行代发文件格式"
+			    quidu      	"5B3C3E89032B"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$74"
+			    quid       	"5B3C3EB102EA"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$75"
+		    quid       	"5B3C3EE900AA"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$76"
+			    quid       	"5B3C3EE90301"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::银行代发::设置由银行代发的员工"
+			    quidu      	"5B3C3ED70355"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$77"
+			    quid       	"5B3C3EE90303"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "银行代发Use Case"
+		    quid       	"5B3C3E7103A4"
+		    title      	"银行代发Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::银行代发::设置银行代发文件格式" @104
+			    location   	(1280, 336)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@104
+				location   	(1280, 474)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置银行代发文件格式")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3E89032B"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::银行代发::设置由银行代发的员工" @105
+			    location   	(1312, 1168)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@105
+				location   	(1312, 1306)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置由银行代发的员工")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3ED70355"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @106
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(480, 688)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@106
+				location   	(480, 848)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$72" @107
+			    location   	(812, 539)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3EB00388"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$73" @108
+				    Parent_View 	@107
+				    location   	(332, -149)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3EB102E8"
+				    client     	@107
+				    supplier   	@104
+				    vertices   	(list Points
+					(812, 539)
+					(1087, 418))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$74" @109
+				    Parent_View 	@107
+				    location   	(332, -149)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3EB102EA"
+				    client     	@107
+				    supplier   	@106
+				    vertices   	(list Points
+					(812, 539)
+					(537, 660))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$75" @110
+			    location   	(875, 914)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3EE900AA"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$76" @111
+				    Parent_View 	@110
+				    location   	(395, 226)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3EE90301"
+				    client     	@110
+				    supplier   	@105
+				    vertices   	(list Points
+					(875, 914)
+					(1213, 1110))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$77" @112
+				    Parent_View 	@110
+				    location   	(395, 226)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3EE90303"
+				    client     	@110
+				    supplier   	@106
+				    vertices   	(list Points
+					(875, 914)
+					(537, 719))
+				    line_style 	0)))))))
+	(object Class_Category "工资分摊"
+	    quid       	"5B3C38080006"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "设置工资分担"
+		    quid       	"5B3C3C67032D")
+		(object UseCase "设置分担计提比例"
+		    quid       	"5B3C3C740191")
+		(object UseCase "设置分担构成"
+		    quid       	"5B3C3C8C01F3")
+		(object UseCase "生成工资费用分配单据"
+		    quid       	"5B3C3C9E0073")
+		(object Association "$UNNAMED$78"
+		    quid       	"5B3C3CB5031A"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$79"
+			    quid       	"5B3C3CB601A8"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::设置工资分担"
+			    quidu      	"5B3C3C67032D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$80"
+			    quid       	"5B3C3CB601AA"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$81"
+		    quid       	"5B3C3CB8019B"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$82"
+			    quid       	"5B3C3CB900F8"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::设置分担计提比例"
+			    quidu      	"5B3C3C740191"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$83"
+			    quid       	"5B3C3CB900FA"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$84"
+		    quid       	"5B3C3CBA0390"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$85"
+			    quid       	"5B3C3CBB0201"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::设置分担构成"
+			    quidu      	"5B3C3C8C01F3"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$86"
+			    quid       	"5B3C3CBB0203"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$87"
+		    quid       	"5B3C3CBC03D2"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$88"
+			    quid       	"5B3C3CBE0073"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::生成工资费用分配单据"
+			    quidu      	"5B3C3C9E0073"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$89"
+			    quid       	"5B3C3CBE0075"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "工资分摊Use Case"
+		    quid       	"5B3C3C530360"
+		    title      	"工资分摊Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::设置工资分担" @113
+			    location   	(1296, 272)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@113
+				location   	(1296, 410)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置工资分担")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3C67032D"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::设置分担计提比例" @114
+			    location   	(1344, 672)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@114
+				location   	(1344, 810)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置分担计提比例")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3C740191"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::设置分担构成" @115
+			    location   	(1328, 1072)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@115
+				location   	(1328, 1210)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"设置分担构成")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3C8C01F3"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资分摊::生成工资费用分配单据" @116
+			    location   	(1360, 1440)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@116
+				location   	(1360, 1578)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成工资费用分配单据")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3C9E0073"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @117
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(464, 880)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@117
+				location   	(464, 1040)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$78" @118
+			    location   	(849, 594)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3CB5031A"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$79" @119
+				    Parent_View 	@118
+				    location   	(385, -286)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CB601A8"
+				    client     	@118
+				    supplier   	@113
+				    vertices   	(list Points
+					(849, 594)
+					(1178, 355))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$80" @120
+				    Parent_View 	@118
+				    location   	(385, -286)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CB601AA"
+				    client     	@118
+				    supplier   	@117
+				    vertices   	(list Points
+					(849, 594)
+					(521, 833))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$81" @121
+			    location   	(876, 779)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3CB8019B"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$82" @122
+				    Parent_View 	@121
+				    location   	(412, -101)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CB900F8"
+				    client     	@121
+				    supplier   	@114
+				    vertices   	(list Points
+					(876, 779)
+					(1232, 695))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$83" @123
+				    Parent_View 	@121
+				    location   	(412, -101)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CB900FA"
+				    client     	@121
+				    supplier   	@117
+				    vertices   	(list Points
+					(876, 779)
+					(521, 864))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$84" @124
+			    location   	(868, 967)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3CBA0390"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$85" @125
+				    Parent_View 	@124
+				    location   	(404, 87)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CBB0201"
+				    client     	@124
+				    supplier   	@115
+				    vertices   	(list Points
+					(868, 967)
+					(1216, 1045))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$86" @126
+				    Parent_View 	@124
+				    location   	(404, 87)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CBB0203"
+				    client     	@124
+				    supplier   	@117
+				    vertices   	(list Points
+					(868, 967)
+					(521, 890))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$87" @127
+			    location   	(894, 1147)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3CBC03D2"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$88" @128
+				    Parent_View 	@127
+				    location   	(430, 267)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CBE0073"
+				    client     	@127
+				    supplier   	@116
+				    vertices   	(list Points
+					(894, 1147)
+					(1267, 1381))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$89" @129
+				    Parent_View 	@127
+				    location   	(430, 267)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3CBE0075"
+				    client     	@127
+				    supplier   	@117
+				    vertices   	(list Points
+					(894, 1147)
+					(521, 914))
+				    line_style 	0)))))))
+	(object Class_Category "月末处理"
+	    quid       	"5B3C381101E2"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "处理月末结转"
+		    quid       	"5B3C3CE20385")
+		(object UseCase "处理反结账"
+		    quid       	"5B3C3CF502D3")
+		(object UseCase "结转上年数据"
+		    quid       	"5B3C3D0000C7")
+		(object Association "$UNNAMED$90"
+		    quid       	"5B3C3D070044"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$91"
+			    quid       	"5B3C3D070249"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::月末处理::处理月末结转"
+			    quidu      	"5B3C3CE20385"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$92"
+			    quid       	"5B3C3D07024B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$93"
+		    quid       	"5B3C3D090071"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$94"
+			    quid       	"5B3C3D090261"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::月末处理::处理反结账"
+			    quidu      	"5B3C3CF502D3"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$95"
+			    quid       	"5B3C3D090263"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$96"
+		    quid       	"5B3C3D0B0242"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$97"
+			    quid       	"5B3C3D0C0019"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::月末处理::结转上年数据"
+			    quidu      	"5B3C3D0000C7"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$98"
+			    quid       	"5B3C3D0C001B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "月末处理Use Case"
+		    quid       	"5B3C3CCF00AC"
+		    title      	"月末处理Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::月末处理::处理月末结转" @130
+			    location   	(1424, 272)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@130
+				location   	(1424, 410)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"处理月末结转")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3CE20385"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::月末处理::处理反结账" @131
+			    location   	(1392, 736)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@131
+				location   	(1392, 874)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"处理反结账")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3CF502D3"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::月末处理::结转上年数据" @132
+			    location   	(1408, 1232)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@132
+				location   	(1408, 1370)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"结转上年数据")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D0000C7"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @133
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(720, 736)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@133
+				location   	(720, 896)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$90" @134
+			    location   	(1041, 520)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3D070044"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$91" @135
+				    Parent_View 	@134
+				    location   	(321, -216)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3D070249"
+				    client     	@134
+				    supplier   	@130
+				    vertices   	(list Points
+					(1041, 520)
+					(1306, 347))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$92" @136
+				    Parent_View 	@134
+				    location   	(321, -216)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3D07024B"
+				    client     	@134
+				    supplier   	@133
+				    vertices   	(list Points
+					(1041, 520)
+					(777, 694))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$93" @137
+			    location   	(1029, 736)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3D090071"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$94" @138
+				    Parent_View 	@137
+				    location   	(309, 0)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3D090261"
+				    client     	@137
+				    supplier   	@131
+				    vertices   	(list Points
+					(1029, 736)
+					(1282, 736))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$95" @139
+				    Parent_View 	@137
+				    location   	(309, 0)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3D090263"
+				    client     	@137
+				    supplier   	@133
+				    vertices   	(list Points
+					(1029, 736)
+					(777, 736))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$96" @140
+			    location   	(1051, 974)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3D0B0242"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$97" @141
+				    Parent_View 	@140
+				    location   	(331, 238)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3D0C0019"
+				    client     	@140
+				    supplier   	@132
+				    vertices   	(list Points
+					(1051, 974)
+					(1326, 1173))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$98" @142
+				    Parent_View 	@140
+				    location   	(331, 238)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3D0C001B"
+				    client     	@140
+				    supplier   	@133
+				    vertices   	(list Points
+					(1051, 974)
+					(777, 775))
+				    line_style 	0)))))))
+	(object Class_Category "工资类别汇总"
+	    quid       	"5B3C381A032F"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "汇总工资类别"
+		    quid       	"5B3C3F100328"
+		    visible_modules 	(list dependency_list
+			(object Dependency_Relationship
+			    quid       	"5B3C3F3B0131"
+			    stereotype 	"include"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::统计所有工资类别本月发放工资的合计数"
+			    quidu      	"5B3C3F290086")
+			(object Dependency_Relationship
+			    quid       	"5B3C3F7F03D1"
+			    stereotype 	"include"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::统计由银行代发工资的类别"
+			    quidu      	"5B3C3F5901D8")))
+		(object UseCase "统计所有工资类别本月发放工资的合计数"
+		    quid       	"5B3C3F290086")
+		(object UseCase "统计由银行代发工资的类别"
+		    quid       	"5B3C3F5901D8")
+		(object UseCase "生成完整工资数据"
+		    quid       	"5B3C3FA501ED")
+		(object Association "$UNNAMED$99"
+		    quid       	"5B3C3F3203D5"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$100"
+			    quid       	"5B3C3F330198"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::汇总工资类别"
+			    quidu      	"5B3C3F100328"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$101"
+			    quid       	"5B3C3F33019A"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$102"
+		    quid       	"5B3C3FB002F9"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$103"
+			    quid       	"5B3C3FB10211"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::生成完整工资数据"
+			    quidu      	"5B3C3FA501ED"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$104"
+			    quid       	"5B3C3FB10213"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "工资汇总Use Case"
+		    quid       	"5B3C3E500134"
+		    title      	"工资汇总Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::统计所有工资类别本月发放工资的合计数" @143
+			    location   	(2320, 720)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@143
+				location   	(2320, 858)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"统计所有工资类别本月发放工资的合计数")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3F290086"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::统计由银行代发工资的类别" @144
+			    location   	(2240, 1136)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@144
+				location   	(2240, 1274)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"统计由银行代发工资的类别")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3F5901D8"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::汇总工资类别" @145
+			    location   	(1232, 880)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@145
+				location   	(1232, 1018)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"汇总工资类别")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3F100328"
+			    height     	118)
+			(object DependencyView "" @146
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	(object SegLabel @147
+				Parent_View 	@146
+				location   	(1755, 791)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	10
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"<<include>>"
+				pctDist    	0.478649
+				height     	9
+				orientation 	0)
+			    line_color 	3342489
+			    quidu      	"5B3C3F3B0131"
+			    client     	@145
+			    supplier   	@143
+			    vertices   	(list Points
+				(1340, 859)
+				(2208, 733))
+			    line_style 	0)
+			(object DependencyView "" @148
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	(object SegLabel @149
+				Parent_View 	@148
+				location   	(1761, 982)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	10
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"<<include>>"
+				pctDist    	0.525605
+				height     	30
+				orientation 	0)
+			    line_color 	3342489
+			    quidu      	"5B3C3F7F03D1"
+			    client     	@145
+			    supplier   	@144
+			    vertices   	(list Points
+				(1340, 905)
+				(2129, 1106))
+			    line_style 	0)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资类别汇总::生成完整工资数据" @150
+			    location   	(1216, 1392)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@150
+				location   	(1216, 1530)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成完整工资数据")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3FA501ED"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @151
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(528, 928)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@151
+				location   	(528, 1088)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$99" @152
+			    location   	(853, 902)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3F3203D5"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$100" @153
+				    Parent_View 	@152
+				    location   	(325, -26)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3F330198"
+				    client     	@152
+				    supplier   	@145
+				    vertices   	(list Points
+					(853, 902)
+					(1122, 883))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$101" @154
+				    Parent_View 	@152
+				    location   	(325, -26)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3F33019A"
+				    client     	@152
+				    supplier   	@151
+				    vertices   	(list Points
+					(853, 902)
+					(585, 921))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$102" @155
+			    location   	(858, 1149)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3FB002F9"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$103" @156
+				    Parent_View 	@155
+				    location   	(330, 221)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3FB10211"
+				    client     	@155
+				    supplier   	@150
+				    vertices   	(list Points
+					(858, 1149)
+					(1131, 1333))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$104" @157
+				    Parent_View 	@155
+				    location   	(330, 221)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3FB10213"
+				    client     	@155
+				    supplier   	@151
+				    vertices   	(list Points
+					(858, 1149)
+					(585, 965))
+				    line_style 	0)))))))
+	(object Class_Category "工资信息查询"
+	    quid       	"5B3C3826016D"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "按权限查询"
+		    quid       	"5B3C3DEF0323")
+		(object UseCase "按多条件查询"
+		    quid       	"5B3C3DF50032")
+		(object UseCase "按一段时间内工资查询"
+		    quid       	"5B3C3E0B0230")
+		(object Association "$UNNAMED$105"
+		    quid       	"5B3C3E1001AA"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$106"
+			    quid       	"5B3C3E1100F2"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资信息查询::按权限查询"
+			    quidu      	"5B3C3DEF0323"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$107"
+			    quid       	"5B3C3E1100F4"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$108"
+		    quid       	"5B3C3E130206"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$109"
+			    quid       	"5B3C3E140079"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资信息查询::按多条件查询"
+			    quidu      	"5B3C3DF50032"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$110"
+			    quid       	"5B3C3E14007B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$111"
+		    quid       	"5B3C3E160162"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$112"
+			    quid       	"5B3C3E170079"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资信息查询::按一段时间内工资查询"
+			    quidu      	"5B3C3E0B0230"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$113"
+			    quid       	"5B3C3E17007B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "工资信息查询Use Case"
+		    quid       	"5B3C3DD9012B"
+		    title      	"工资信息查询Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资信息查询::按权限查询" @158
+			    location   	(1264, 432)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@158
+				location   	(1264, 570)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"按权限查询")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3DEF0323"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资信息查询::按多条件查询" @159
+			    location   	(1264, 848)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@159
+				location   	(1264, 986)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"按多条件查询")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3DF50032"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::工资信息查询::按一段时间内工资查询" @160
+			    location   	(1280, 1392)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@160
+				location   	(1280, 1530)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"按一段时间内工资查询")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3E0B0230"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @161
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(480, 720)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@161
+				location   	(480, 880)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$105" @162
+			    location   	(845, 583)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3E1001AA"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$106" @163
+				    Parent_View 	@162
+				    location   	(365, -137)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3E1100F2"
+				    client     	@162
+				    supplier   	@158
+				    vertices   	(list Points
+					(845, 583)
+					(1154, 470))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$107" @164
+				    Parent_View 	@162
+				    location   	(365, -137)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3E1100F4"
+				    client     	@162
+				    supplier   	@161
+				    vertices   	(list Points
+					(845, 583)
+					(537, 697))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$108" @165
+			    location   	(845, 776)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3E130206"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$109" @166
+				    Parent_View 	@165
+				    location   	(365, 56)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3E140079"
+				    client     	@165
+				    supplier   	@159
+				    vertices   	(list Points
+					(845, 776)
+					(1154, 825))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$110" @167
+				    Parent_View 	@165
+				    location   	(365, 56)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3E14007B"
+				    client     	@165
+				    supplier   	@161
+				    vertices   	(list Points
+					(845, 776)
+					(537, 728))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$111" @168
+			    location   	(873, 1051)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3C3E160162"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$112" @169
+				    Parent_View 	@168
+				    location   	(393, 331)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3E170079"
+				    client     	@168
+				    supplier   	@160
+				    vertices   	(list Points
+					(873, 1051)
+					(1210, 1334))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$113" @170
+				    Parent_View 	@168
+				    location   	(393, 331)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3C3E17007B"
+				    client     	@168
+				    supplier   	@161
+				    vertices   	(list Points
+					(873, 1051)
+					(537, 768))
+				    line_style 	0)))))))
+	(object Class_Category "报表生成"
+	    quid       	"5B3C382F011F"
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "生成工资表"
+		    quid       	"5B3C3D2F00E8")
+		(object UseCase "生成工资变动审批表"
+		    quid       	"5B3C3D3B0037")
+		(object UseCase "生成国家工资的发放表"
+		    quid       	"5B3C3D4502DC")
+		(object UseCase "生成学院津贴发放表"
+		    quid       	"5B3C3D500156")
+		(object UseCase "生成特殊岗位津贴发放表"
+		    quid       	"5B3C3D5F00B1")
+		(object UseCase "生成学院临时性奖金发放表"
+		    quid       	"5B3C3D7801F7")
+		(object UseCase "生成工资津贴奖金项目的定义表"
+		    quid       	"5B3C3D890364")
+		(object Association "$UNNAMED$114"
+		    quid       	"5B3C3DB001AC"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$115"
+			    quid       	"5B3C3DB10029"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资表"
+			    quidu      	"5B3C3D2F00E8"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$116"
+			    quid       	"5B3C3DB1002B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$117"
+		    quid       	"5B3C3DB20322"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$118"
+			    quid       	"5B3C3DB30351"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资变动审批表"
+			    quidu      	"5B3C3D3B0037"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$119"
+			    quid       	"5B3C3DB30353"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$120"
+		    quid       	"5B3C3DB50237"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$121"
+			    quid       	"5B3C3DB60180"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成国家工资的发放表"
+			    quidu      	"5B3C3D4502DC"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$122"
+			    quid       	"5B3C3DB60182"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$123"
+		    quid       	"5B3C3DB90041"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$124"
+			    quid       	"5B3C3DB90291"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成学院津贴发放表"
+			    quidu      	"5B3C3D500156"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$125"
+			    quid       	"5B3C3DB90293"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$126"
+		    quid       	"5B3C3DBC00B1"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$127"
+			    quid       	"5B3C3DBC0319"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成特殊岗位津贴发放表"
+			    quidu      	"5B3C3D5F00B1"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$128"
+			    quid       	"5B3C3DBC031B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$129"
+		    quid       	"5B3C3DBE0201"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$130"
+			    quid       	"5B3C3DBF0008"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成学院临时性奖金发放表"
+			    quidu      	"5B3C3D7801F7"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$131"
+			    quid       	"5B3C3DBF000A"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$132"
+		    quid       	"5B3C3DC0039F"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$133"
+			    quid       	"5B3C3DC103C9"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资津贴奖金项目的定义表"
+			    quidu      	"5B3C3D890364"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$134"
+			    quid       	"5B3C3DC103CB"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$135"
+		    quid       	"5B3D87400239"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$136"
+			    quid       	"5B3D874200FE"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资表"
+			    quidu      	"5B3C3D2F00E8"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$137"
+			    quid       	"5B3D87420100"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$138"
+		    quid       	"5B3D87460113"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$139"
+			    quid       	"5B3D8746028B"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资津贴奖金项目的定义表"
+			    quidu      	"5B3C3D890364"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$140"
+			    quid       	"5B3D87460296"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$141"
+		    quid       	"5B3D87490080"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$142"
+			    quid       	"5B3D874A0268"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成学院临时性奖金发放表"
+			    quidu      	"5B3C3D7801F7"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$143"
+			    quid       	"5B3D874A0274"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$144"
+		    quid       	"5B3D874D004D"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$145"
+			    quid       	"5B3D874D029C"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成特殊岗位津贴发放表"
+			    quidu      	"5B3C3D5F00B1"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$146"
+			    quid       	"5B3D874D02A0"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$147"
+		    quid       	"5B3D874F03C1"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$148"
+			    quid       	"5B3D87510040"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成学院津贴发放表"
+			    quidu      	"5B3C3D500156"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$149"
+			    quid       	"5B3D87510042"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$150"
+		    quid       	"5B3D8758001B"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$151"
+			    quid       	"5B3D875801CC"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成国家工资的发放表"
+			    quidu      	"5B3C3D4502DC"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$152"
+			    quid       	"5B3D875801D7"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371")))
+		(object Association "$UNNAMED$153"
+		    quid       	"5B3D875A0283"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$154"
+			    quid       	"5B3D875B00C5"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资变动审批表"
+			    quidu      	"5B3C3D3B0037"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$155"
+			    quid       	"5B3D875B00C7"
+			    supplier   	"Use Case View::Use-Case Model::Actors::财务部员工"
+			    quidu      	"5B3D871D0371"))))
+	    logical_presentations 	(list unit_reference_list
+		(object UseCaseDiagram "报表生成Use Case"
+		    quid       	"5B3C3D1C0163"
+		    title      	"报表生成Use Case"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资表" @171
+			    location   	(1568, 416)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@171
+				location   	(1568, 554)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成工资表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D2F00E8"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资津贴奖金项目的定义表" @172
+			    location   	(2288, 784)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@172
+				location   	(2288, 922)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成工资津贴奖金项目的定义表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D890364"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成学院临时性奖金发放表" @173
+			    location   	(2368, 1312)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@173
+				location   	(2368, 1450)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成学院临时性奖金发放表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D7801F7"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成特殊岗位津贴发放表" @174
+			    location   	(1872, 1696)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@174
+				location   	(1872, 1834)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成特殊岗位津贴发放表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D5F00B1"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成学院津贴发放表" @175
+			    location   	(1008, 1664)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@175
+				location   	(1008, 1802)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成学院津贴发放表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D500156"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成国家工资的发放表" @176
+			    location   	(848, 1232)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@176
+				location   	(848, 1370)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成国家工资的发放表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D4502DC"
+			    height     	118)
+			(object UseCaseView "Use Case View::Use-Case Model::Use Cases::工资福利管理系统::报表生成::生成工资变动审批表" @177
+			    location   	(816, 704)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@177
+				location   	(816, 842)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	630
+				justify    	0
+				label      	"生成工资变动审批表")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5B3C3D3B0037"
+			    height     	118)
+			(object ClassView "Class" "Use Case View::Use-Case Model::Actors::财务部员工" @178
+			    ShowCompartmentStereotypes 	TRUE
+			    IncludeAttribute 	TRUE
+			    IncludeOperation 	TRUE
+			    location   	(1504, 1040)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@178
+				location   	(1504, 1200)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	325
+				justify    	0
+				label      	"财务部员工")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5B3D871D0371"
+			    annotation 	8
+			    autoResize 	TRUE)
+			(object AssociationViewNew "$UNNAMED$135" @179
+			    location   	(1528, 768)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D87400239"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$136" @180
+				    Parent_View 	@179
+				    location   	(24, -272)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D874200FE"
+				    client     	@179
+				    supplier   	@171
+				    vertices   	(list Points
+					(1528, 768)
+					(1548, 577))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$137" @181
+				    Parent_View 	@179
+				    location   	(24, -272)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D87420100"
+				    client     	@179
+				    supplier   	@178
+				    vertices   	(list Points
+					(1528, 768)
+					(1509, 959))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$138" @182
+			    location   	(1790, 943)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D87460113"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$139" @183
+				    Parent_View 	@182
+				    location   	(286, -97)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D8746028B"
+				    client     	@182
+				    supplier   	@172
+				    vertices   	(list Points
+					(1790, 943)
+					(2020, 867))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$140" @184
+				    Parent_View 	@182
+				    location   	(286, -97)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D87460296"
+				    client     	@182
+				    supplier   	@178
+				    vertices   	(list Points
+					(1790, 943)
+					(1561, 1020))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$141" @185
+			    location   	(1908, 1165)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D87490080"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$142" @186
+				    Parent_View 	@185
+				    location   	(404, 125)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D874A0268"
+				    client     	@185
+				    supplier   	@173
+				    vertices   	(list Points
+					(1908, 1165)
+					(2256, 1275))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$143" @187
+				    Parent_View 	@185
+				    location   	(404, 125)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D874A0274"
+				    client     	@185
+				    supplier   	@178
+				    vertices   	(list Points
+					(1908, 1165)
+					(1561, 1055))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$144" @188
+			    location   	(1719, 1426)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D874D004D"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$145" @189
+				    Parent_View 	@188
+				    location   	(215, 386)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D874D029C"
+				    client     	@188
+				    supplier   	@174
+				    vertices   	(list Points
+					(1719, 1426)
+					(1837, 1637))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$146" @190
+				    Parent_View 	@188
+				    location   	(215, 386)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D874D02A0"
+				    client     	@188
+				    supplier   	@178
+				    vertices   	(list Points
+					(1719, 1426)
+					(1602, 1215))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$147" @191
+			    location   	(1227, 1384)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D874F03C1"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$148" @192
+				    Parent_View 	@191
+				    location   	(-277, 344)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D87510040"
+				    client     	@191
+				    supplier   	@175
+				    vertices   	(list Points
+					(1227, 1384)
+					(1050, 1605))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$149" @193
+				    Parent_View 	@191
+				    location   	(-277, 344)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D87510042"
+				    client     	@191
+				    supplier   	@178
+				    vertices   	(list Points
+					(1227, 1384)
+					(1405, 1164))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$150" @194
+			    location   	(1199, 1125)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D8758001B"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$151" @195
+				    Parent_View 	@194
+				    location   	(-305, 85)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D875801CC"
+				    client     	@194
+				    supplier   	@176
+				    vertices   	(list Points
+					(1199, 1125)
+					(956, 1197))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$152" @196
+				    Parent_View 	@194
+				    location   	(-305, 85)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D875801D7"
+				    client     	@194
+				    supplier   	@178
+				    vertices   	(list Points
+					(1199, 1125)
+					(1443, 1054))
+				    line_style 	0)))
+			(object AssociationViewNew "$UNNAMED$153" @197
+			    location   	(1217, 897)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3D875A0283"
+			    roleview_list 	(list RoleViews
+				(object RoleView "$UNNAMED$154" @198
+				    Parent_View 	@197
+				    location   	(-287, -143)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D875B00C5"
+				    client     	@197
+				    supplier   	@177
+				    vertices   	(list Points
+					(1217, 897)
+					(989, 786))
+				    line_style 	0)
+				(object RoleView "$UNNAMED$155" @199
+				    Parent_View 	@197
+				    location   	(-287, -143)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5B3D875B00C7"
+				    client     	@197
+				    supplier   	@178
+				    vertices   	(list Points
+					(1217, 897)
+					(1445, 1009))
+				    line_style 	0))))))))
+    logical_presentations 	(list unit_reference_list))

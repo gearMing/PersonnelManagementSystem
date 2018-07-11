@@ -1,0 +1,49 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	134)
+
+(object Class_Category "Actors"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3518CBC9026C"
+    documentation 	
+|All Actors in the system are contained in this package.   This is both as a way to organize the model, making it easier to understand, and to provide a way to manage the actors in a single configuration item. 
+|
+|If different individuals are responsible for different actors and their related artifacts, the actors should be organized into their own packages and placed under separate configuration control.
+    
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "普通员工"
+	    quid       	"353D5816026C"
+	    stereotype 	"Actor")
+	(object Class "人事部员工"
+	    quid       	"5B3A1B2101A4"
+	    documentation 	"具有管理员权限"
+	    stereotype 	"Actor")
+	(object Class "财务部员工"
+	    quid       	"5B3D871D0371"
+	    stereotype 	"Actor")
+	(object Class "学校领导"
+	    quid       	"5B3B6BA40279"
+	    stereotype 	"Actor")
+	(object Class "相关部门教职工"
+	    quid       	"5B3B6B95035C"
+	    stereotype 	"Actor")
+	(object Class "教职工"
+	    quid       	"5B3B6C6E002D"
+	    stereotype 	"Actor")
+	(object Class "管理员"
+	    quid       	"5B3C8D030244"
+	    stereotype 	"Actor")
+	(object Class "劳资部"
+	    quid       	"5B3D8F020382"
+	    stereotype 	"Actor")
+	(object Class "组织部"
+	    quid       	"5B3D8F41027A"
+	    stereotype 	"Actor")
+	(object Class "招生部"
+	    quid       	"5B3D9829010B"
+	    stereotype 	"Actor"))
+    logical_presentations 	(list unit_reference_list))

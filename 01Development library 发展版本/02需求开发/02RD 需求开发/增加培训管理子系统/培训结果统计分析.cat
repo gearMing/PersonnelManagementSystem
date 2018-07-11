@@ -1,0 +1,281 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	134)
+
+(object Class_Category "培训结果统计分析"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5B3DDCE403D7"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "培训部员工"
+	    quid       	"5B3DDD450177"
+	    stereotype 	"Actor")
+	(object UseCase "统计需求调查结果"
+	    quid       	"5B3DDD660146")
+	(object UseCase "确定培训需求"
+	    quid       	"5B3DDD77009E")
+	(object UseCase "分析制定培训计划依据"
+	    quid       	"5B3DDD8C00B6")
+	(object Association "$UNNAMED$0"
+	    quid       	"5B3DDDAC0150"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"5B3DDDAC034D"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::统计需求调查结果"
+		    quidu      	"5B3DDD660146"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$2"
+		    quid       	"5B3DDDAC034F"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::培训部员工"
+		    quidu      	"5B3DDD450177")))
+	(object Association "$UNNAMED$3"
+	    quid       	"5B3DDDAE0371"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$4"
+		    quid       	"5B3DDDAF01F5"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::确定培训需求"
+		    quidu      	"5B3DDD77009E"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$5"
+		    quid       	"5B3DDDAF01F7"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::培训部员工"
+		    quidu      	"5B3DDD450177")))
+	(object Association "$UNNAMED$6"
+	    quid       	"5B3DDDB10091"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"5B3DDDB1025D"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::分析制定培训计划依据"
+		    quidu      	"5B3DDD8C00B6"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$8"
+		    quid       	"5B3DDDB1025F"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::培训部员工"
+		    quidu      	"5B3DDD450177"))))
+    logical_presentations 	(list unit_reference_list
+	(object UseCaseDiagram "培训结果统计分析"
+	    quid       	"5B3DDD22012F"
+	    title      	"培训结果统计分析"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::统计需求调查结果" @1
+		    location   	(736, 176)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(736, 314)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"统计需求调查结果")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DDD660146")
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::确定培训需求" @2
+		    location   	(832, 480)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(832, 618)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"确定培训需求")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DDD77009E")
+		(object ClassView "Class" "Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::培训部员工" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(288, 464)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(288, 624)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	328
+			justify    	0
+			label      	"培训部员工")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"5B3DDD450177"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$0" @4
+		    location   	(462, 350)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DDDAC0150"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @5
+			    Parent_View 	@4
+			    location   	(174, -114)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DDDAC034D"
+			    client     	@4
+			    supplier   	@1
+			    vertices   	(list Points
+				(462, 350)
+				(580, 275))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$2" @6
+			    Parent_View 	@4
+			    location   	(174, -114)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DDDAC034F"
+			    client     	@4
+			    supplier   	@3
+			    vertices   	(list Points
+				(462, 350)
+				(345, 426))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$3" @7
+		    location   	(533, 469)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DDDAE0371"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$4" @8
+			    Parent_View 	@7
+			    location   	(245, 5)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DDDAF01F5"
+			    client     	@7
+			    supplier   	@2
+			    vertices   	(list Points
+				(533, 469)
+				(722, 474))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$5" @9
+			    Parent_View 	@7
+			    location   	(245, 5)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DDDAF01F7"
+			    client     	@7
+			    supplier   	@3
+			    vertices   	(list Points
+				(533, 469)
+				(345, 464))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::培训管理系统::培训结果统计分析::分析制定培训计划依据" @10
+		    location   	(688, 768)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(688, 906)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"分析制定培训计划依据")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DDD8C00B6")
+		(object AssociationViewNew "$UNNAMED$6" @11
+		    location   	(478, 608)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DDDB10091"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @12
+			    Parent_View 	@11
+			    location   	(190, 144)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DDDB1025D"
+			    client     	@11
+			    supplier   	@10
+			    vertices   	(list Points
+				(478, 608)
+				(611, 710))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$8" @13
+			    Parent_View 	@11
+			    location   	(190, 144)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DDDB1025F"
+			    client     	@11
+			    supplier   	@3
+			    vertices   	(list Points
+				(478, 608)
+				(345, 507))
+			    line_style 	0)))))))

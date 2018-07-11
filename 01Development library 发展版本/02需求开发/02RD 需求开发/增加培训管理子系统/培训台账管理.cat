@@ -1,0 +1,443 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	134)
+
+(object Class_Category "培训台账管理"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5B3DD2C90118"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "财务部"
+	    quid       	"5B3DD2ED00F6"
+	    stereotype 	"Actor")
+	(object Class "培训部"
+	    quid       	"5B3DD30C00E6"
+	    stereotype 	"Actor")
+	(object UseCase "添加台账信息"
+	    quid       	"5B3DD32102C7")
+	(object UseCase "修改台账信息"
+	    quid       	"5B3DD33A0017")
+	(object UseCase "删除台账信息"
+	    quid       	"5B3DD343022B")
+	(object UseCase "查询台账信息"
+	    quid       	"5B3DD34A00ED")
+	(object Association "$UNNAMED$0"
+	    quid       	"5B3DD35F0208"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"5B3DD3600025"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::添加台账信息"
+		    quidu      	"5B3DD32102C7"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$2"
+		    quid       	"5B3DD360002C"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::培训部"
+		    quidu      	"5B3DD30C00E6")))
+	(object Association "$UNNAMED$3"
+	    quid       	"5B3DD3610213"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$4"
+		    quid       	"5B3DD362013A"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::修改台账信息"
+		    quidu      	"5B3DD33A0017"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$5"
+		    quid       	"5B3DD362013F"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::培训部"
+		    quidu      	"5B3DD30C00E6")))
+	(object Association "$UNNAMED$6"
+	    quid       	"5B3DD3630326"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"5B3DD3640226"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::删除台账信息"
+		    quidu      	"5B3DD343022B"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$8"
+		    quid       	"5B3DD364022A"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::培训部"
+		    quidu      	"5B3DD30C00E6")))
+	(object Association "$UNNAMED$9"
+	    quid       	"5B3DD36600D9"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$10"
+		    quid       	"5B3DD366032C"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::查询台账信息"
+		    quidu      	"5B3DD34A00ED"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$11"
+		    quid       	"5B3DD3660332"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::培训部"
+		    quidu      	"5B3DD30C00E6")))
+	(object Association "$UNNAMED$12"
+	    quid       	"5B3DD37102B8"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"5B3DD372014C"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::查询台账信息"
+		    quidu      	"5B3DD34A00ED"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$14"
+		    quid       	"5B3DD3720153"
+		    supplier   	"Use Case View::Use-Case Model::培训台账管理::财务部"
+		    quidu      	"5B3DD2ED00F6"))))
+    logical_presentations 	(list unit_reference_list
+	(object UseCaseDiagram "培训台账管理"
+	    quid       	"5B3DD2E50036"
+	    title      	"培训台账管理"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object UseCaseView "Use Case View::Use-Case Model::培训台账管理::添加台账信息" @1
+		    location   	(1552, 144)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(1552, 282)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"添加台账信息")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DD32102C7"
+		    height     	118)
+		(object UseCaseView "Use Case View::Use-Case Model::培训台账管理::修改台账信息" @2
+		    location   	(2032, 384)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(2032, 522)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"修改台账信息")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DD33A0017"
+		    height     	118)
+		(object UseCaseView "Use Case View::Use-Case Model::培训台账管理::删除台账信息" @3
+		    location   	(2000, 880)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(2000, 1018)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"删除台账信息")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DD343022B"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Use-Case Model::培训台账管理::培训部" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(704, 496)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(704, 656)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	331
+			justify    	0
+			label      	"培训部")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"5B3DD30C00E6"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$0" @5
+		    location   	(996, 371)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DD35F0208"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @6
+			    Parent_View 	@5
+			    location   	(292, -125)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD3600025"
+			    client     	@5
+			    supplier   	@1
+			    vertices   	(list Points
+				(996, 371)
+				(1231, 274))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$2" @7
+			    Parent_View 	@5
+			    location   	(292, -125)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD360002C"
+			    client     	@5
+			    supplier   	@4
+			    vertices   	(list Points
+				(996, 371)
+				(761, 469))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$3" @8
+		    location   	(1341, 438)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DD3610213"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$4" @9
+			    Parent_View 	@8
+			    location   	(637, -58)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD362013A"
+			    client     	@8
+			    supplier   	@2
+			    vertices   	(list Points
+				(1341, 438)
+				(1922, 389))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$5" @10
+			    Parent_View 	@8
+			    location   	(637, -58)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD362013F"
+			    client     	@8
+			    supplier   	@4
+			    vertices   	(list Points
+				(1341, 438)
+				(761, 488))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$6" @11
+		    location   	(1325, 677)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DD3630326"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @12
+			    Parent_View 	@11
+			    location   	(621, 181)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD3640226"
+			    client     	@11
+			    supplier   	@3
+			    vertices   	(list Points
+				(1325, 677)
+				(1890, 845))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$8" @13
+			    Parent_View 	@11
+			    location   	(621, 181)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD364022A"
+			    client     	@11
+			    supplier   	@4
+			    vertices   	(list Points
+				(1325, 677)
+				(761, 510))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::培训台账管理::查询台账信息" @14
+		    location   	(1840, 1312)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1840, 1450)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"查询台账信息")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5B3DD34A00ED"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$9" @15
+		    location   	(1260, 895)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DD36600D9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$10" @16
+			    Parent_View 	@15
+			    location   	(556, 399)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD366032C"
+			    client     	@15
+			    supplier   	@14
+			    vertices   	(list Points
+				(1260, 895)
+				(1760, 1254))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$11" @17
+			    Parent_View 	@15
+			    location   	(556, 399)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD3660332"
+			    client     	@15
+			    supplier   	@4
+			    vertices   	(list Points
+				(1260, 895)
+				(761, 536))
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Use-Case Model::培训台账管理::财务部" @18
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2704, 480)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(2704, 640)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	328
+			justify    	0
+			label      	"财务部")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"5B3DD2ED00F6"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$12" @19
+		    location   	(2256, 907)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5B3DD37102B8"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$13" @20
+			    Parent_View 	@19
+			    location   	(-448, 427)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD372014C"
+			    client     	@19
+			    supplier   	@14
+			    vertices   	(list Points
+				(2256, 907)
+				(1895, 1253))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$14" @21
+			    Parent_View 	@19
+			    location   	(-448, 427)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5B3DD3720153"
+			    client     	@19
+			    supplier   	@18
+			    vertices   	(list Points
+				(2256, 907)
+				(2617, 562))
+			    line_style 	0)))))))
