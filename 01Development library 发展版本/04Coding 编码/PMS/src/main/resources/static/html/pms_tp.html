@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>人事管理系统</title>
+<!-- css -->
+<link href="../css/bootstrap-combined.min.css" rel="stylesheet"
+	type="text/css">
+<link href="../css/layoutit.css" rel="stylesheet" type="text/css">
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/pagination.css" rel="stylesheet" type="text/css">
+
+<!-- js -->
+<script src="../js/jquery-2.0.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<!-- <script src="../js/jquery.htmlClean.js"></script> -->
+<!-- <script src="../js/scripts.js"></script> -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jqPaginator.js"></script>
+<script src="../js/pms-tp.js"></script>
+
+</head>
+<body style="margin:0;">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<img alt="140x140" src="img/a.jpg" class="img-rounded" />
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container-fluid">
+							<a class="btn btn-navbar"
+								data-target=".navbar-responsive-collapse" data-toggle="collapse"></a>
+							<a class="brand" href="./pms_main.html">人事部门门户</a>
+							<div class="nav-collapse navbar-responsive-collapse in collapse">
+								<ul class="nav">
+									<li><a href="./pms_main.html">首页</a></li>
+									<li><a href="#">政策法规</a></li>
+									<li><a href="#">人事管理</a></li>
+									<li><a href="#">机构编制</a></li>
+									<li><a href="#">工资福利</a></li>
+									<li><a href="#">文档管理</a></li>
+									<li><a href="#">公开招聘</a></li>
+									<li><a href="#">社会保险</a></li>
+									<li class="active"><a href="./pms_tp.html">培训管理</a></li>
+									<li><a href="#">职称管理</a></li>
+									<li><a href="#">安保人员管理</a></li>
+									<li><a href="#">报表管理</a></li>
+									<li><a href="#">考勤管理</a></li>
+								</ul>
+								<ul class="nav pull-right">
+									<li><a>用户，您好！</a></li>
+									<li><a href="#">退出登录</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span10">
+				<h3 class="text-center">培训计划</h3>
+			</div>
+			<div class="span2">
+				<a href="#modal-plan-add" role="button" class="btn btn-inverse"
+					data-toggle="modal">添加计划</a>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span12">
+				<hr />
+				<table class="table table-hover table-bordered">
+					<thead align="center">
+						<tr>
+							<th><input type="checkbox" /></th>
+							<th>计划编号</th>
+							<th>计划名称</th>
+							<th>计划预算</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody id="table-data">
+
+					</tbody>
+				</table>
+
+				<div>
+					<ul id="pagination"
+						class="pagination jq-pagination pagination-centered">
+
+					</ul>
+				</div>
+
+				<!-- 修改计划模态框 -->
+				<div id="modal-plan-change" class="modal hide fade" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">×</button>
+						<h3 id="myModalLabel">修改计划</h3>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<td>计划编号：</td>
+								<td><input id="change_plan_id" type="text"
+									name="assessment"></td>
+							</tr>
+							<tr>
+								<td>计划名称：</td>
+								<td><input id="change_plan_name" type="text"
+									name="plan_name"></td>
+							</tr>
+							<tr>
+								<td>计划预算：</td>
+								<td><input id="change_plan_budget" type="text"
+									name="budget"></td>
+							</tr>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+						<button class="btn btn-primary" onclick="changePlan()">保存修改</button>
+					</div>
+				</div>
+
+				<!-- 添加计划模态框 -->
+				<div id="modal-plan-add" class="modal hide fade" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">×</button>
+						<h3 id="myModalLabel">添加计划</h3>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<td>计划编号：</td>
+								<td><input id="add_plan_id" type="text" name="assessment"></td>
+							</tr>
+							<tr>
+								<td>计划名称：</td>
+								<td><input id="add_plan_name" type="text" name="plan_name"></td>
+							</tr>
+							<tr>
+								<td>计划预算：</td>
+								<td><input id="add_plan_budget" type="text" name="budget"></td>
+							</tr>
+						</table>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+						<button class="btn btn-primary">发布计划</button>
+					</div>
+				</div>
+
+				<!-- 添加计划模态框 -->
+				<div id="modal-plan-del" class="modal hide fade" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">×</button>
+						<h3 id="myModalLabel">删除计划</h3>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<td>即将删除的计划为：<label id="del_plan_id"
+									style="font-weight:bold;"></label><label id="del_plan_name"
+									style="font-weight:bold;"></label></td>
+							</tr>
+							<tr>
+								<td>删除该计划，将会删除其相关信息，确定删除吗？</td>
+							</tr>
+						</table>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+						<button class="btn btn-primary" onclick="delPlan()">删除</button>
+					</div>
+				</div>
+				
+				<!-- 管理培训台账模态框 -->
+				<div id="modal-logsheet-manage" class="modal hide fade" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">×</button>
+						<h3 id="myModalLabel">管理培训台账</h3>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<td>培训计划明细编号</td>
+								<td><input type="text" id="logsheet_id" /></td>
+							</tr>
+							<tr>
+								<td>培训计划编号</td>
+								<td><input type="text" id="assessment" /></td>
+							</tr>
+							<tr>
+								<td>培训人员编号</td>
+								<td><input type="text" id="worker_id" /></td>
+							</tr>
+							<tr>
+								<td>培训人员姓名</td>
+								<td><input type="text" id="worker_name" /></td>
+							</tr>
+							<tr>
+								<td>培训范围</td>
+								<td><input type="text" id="category" /></td>
+							</tr>
+							<tr>
+								<td>Training</td>
+								<td><input type="text" id="training" /></td>
+							</tr>
+							<tr>
+								<td>参加培训人数</td>
+								<td><input type="text" id="people_num" /></td>
+							</tr>
+							<tr>
+								<td>培训时间</td>
+								<td><input type="text" id="time" /></td>
+							</tr>
+							<tr>
+								<td>培训目的</td>
+								<td><input type="text" id="purpose" /></td>
+							</tr>
+							<tr>
+								<td>培训主题</td>
+								<td><input type="text" id="object" /></td>
+							</tr>
+							<tr>
+								<td>赞助商</td>
+								<td><input type="text" id="sponsor" /></td>
+							</tr>
+							<tr>
+								<td>培训地点</td>
+								<td><input type="text" id="area" /></td>
+							</tr>
+							<tr>
+								<td>备注</td>
+								<td><input type="text" id="remark" /></td>
+							</tr>
+							
+						</table>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+						<button class="btn btn-primary" onclick="saveLogSheet()">保存修改</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
