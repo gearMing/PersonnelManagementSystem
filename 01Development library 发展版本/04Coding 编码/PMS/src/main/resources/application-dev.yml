@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+debug: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pms?characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+    
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+    static-path-pattern: /**
+  
+  #版本号管理静态资源  
+  resources:
+    chain:
+      enabled: true
+      cache: true
+      strategy:
+        content:
+          enabled: true
+          paths: /static/**
+        fixed:
+          enabled: true
+          version: 1.0
+          paths: /fonts/**
+    #跟swagger冲突
+    #static-locations: classpath:/static/ 
+    cache-period: 0
+    
+    
+  devtools: 
+    restart: 
+      additional-exclude: static/**
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      #location: /resources/upload/
+      
+swagger:
+  enable: true
